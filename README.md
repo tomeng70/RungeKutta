@@ -10,13 +10,20 @@ It also shows how to estimate the growth using an application of the Runge Kutta
 
 Both programs plot the theoretical and estimated values vs time.
 
-# Logistic Growth
-The following plot shows exponential growth calculated three ways:
-
+# Exponential Growth
+The following plots shows exponential growth calculated three ways:
 - "." are the analytically derived values for population.
-- "+" are the estimated values using the Runge Kutta method.
+- "+" ar the estimated values calculated using the time discretized rate equation.
+- "^" are the estimated values calculated using the Runge Kutta method.
 
+<img src="https://github.com/tomeng70/RungeKutta/assets/12796159/03d08a3d-01ab-4fa8-98de-719df0bb2c1f" width="500" >
+<BR>
+<img src="https://github.com/tomeng70/RungeKutta/assets/12796159/3d8d1e91-a5d0-4747-aa79-d62eb25e96bb" width="500" >
 
+# Logistic Growth
+The following plots shows exponential growth calculated two ways:
+- "." are the analytically derived values for population.
+- "+" are the estimated values calculated using the Runge Kutta method.
 
 <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/8805a7d6-7ae0-46c2-b6b5-17e40b702895" width="500" >
 <BR>
