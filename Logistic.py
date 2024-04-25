@@ -58,7 +58,7 @@ def main():
         NList.append(pop)
 
     # plot results. 
-    plt.plot(tList, NList, tList, NEstList)
+    plt.plot(tList, NList, ".", tList, NEstList, "+")
     plt.title("Population Growth vs Time (sec)")
     plt.show()
 
