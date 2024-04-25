@@ -23,8 +23,6 @@ def main():
     tList = [0]
     NList = [N0]
     NEstList = [N0]
-    errList = [0]
-
 
     while (t <= TIME_LIMIT):
         # use previous estimated pop
@@ -33,9 +31,6 @@ def main():
         NPrev = NEstList[-1]
         NNext = calcNext(NPrev)
         NEstList.append(NNext)
-
-        err = NList[-1] - NNext
-        errList.append(err)
 
         # add time to list
         t = t + deltaT
