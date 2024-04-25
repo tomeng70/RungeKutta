@@ -1,4 +1,4 @@
-#H1 Introduction
+# Introduction
 
 This repository demonstrates how you can numerically estimate values for exponential growth and for logistic growth.
 
