@@ -13,7 +13,7 @@ Both programs plot the theoretical and estimated values vs time.
 # Exponential Growth
 The following plots shows exponential growth calculated three ways:
 - "." are the analytically derived values for population.
-- "+" ar the estimated values calculated using the time discretized rate equation.
+- "+" are the estimated values calculated using the time discretized rate equation.
 - "^" are the estimated values calculated using the Runge Kutta method.
 
 <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/03d08a3d-01ab-4fa8-98de-719df0bb2c1f" width="500" >
