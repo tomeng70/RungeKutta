@@ -1,17 +1,18 @@
 import math
-
 from matplotlib import pyplot as plt
 
-H = 0.01
+H = 0.01                # the time step (seconds)
 R = 0.03                # growth rate
-K = 100                 # carrying capacity.
+K = 100                 # carrying capacity
 N0 = 1                  # initial population (at t = 0)
 TIME_LIMIT = 500        # time limit for plot (seconds)
 
+# our analytical solution.
 def popLogistic(t):
     val = K / (1 + (K / N0 - 1) * math.exp(-R * t))
     return val
 
+# the rate equation for our system.
 def rateEqn(N, t):
     # note for logistic growth, the rate does not depend on time.
     # instead, it's based on the current population and carrying capacity.
@@ -20,6 +21,7 @@ def rateEqn(N, t):
     val = R * ((K - N)/K) * N
     return val
 
+# calculate next value in population using previous value and previous time.
 def calcNext(N, t):
     # calculate the runge kutta terms.
     k1 = rateEqn(N, t)
@@ -32,25 +34,28 @@ def calcNext(N, t):
     return nextVal
 
 def main():
-    print("hello")
-
+    # t is the current time in seconds.
     t = 0
-    deltaT = H
-    tList = [0]
-    NList = [N0]
-    NEstList = [N0]
 
+    # tList holds the time values.
+    tList = [0]
+
+    # Nlist holds the analytical values for population size.
+    NList = [N0]
+
+    # NEstList holds the estimated values for population size (RK4).
+    NEstList = [N0]
 
     while (t <= TIME_LIMIT):
         # use previous estimated pop
-        # and previous time to 
-        # calculate the next estimated pop
+        # and previous time to calculate 
+        # the next estimated pop
         NPrev = NEstList[-1]
         NNext = calcNext(NPrev, t)
         NEstList.append(NNext)
 
         # add time to list
-        t = t + deltaT
+        t = t + H
         tList.append(t)
 
         # add next element in list analytic solution
@@ -59,12 +64,7 @@ def main():
 
     # plot results. 
     plt.plot(tList, NList, ".", tList, NEstList, "+")
-    plt.title("Population Growth vs Time (sec)")
+    plt.title("Logistic Growth: Population vs Time (sec)")
     plt.show()
 
-    print("goodbye!")
-
 main()
-
-
-    
