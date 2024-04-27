@@ -1,5 +1,7 @@
 # Introduction
-This repository demonstrates how you can numerically estimate values for exponential growth and for logistic growth.
+This repository demonstrates how an estimated solution to an ordinary differential equation can be generated using numerical methods.  There are two projects within this repository.  The project <a href="./exponential/">exponential/</a> demonstrates how the backwards Euler method can be used to obtain an estimated solution for the exponential growth rate problem.  The project plots the population vs time for a colony that grows exponentially.  The estimated results are compared to the exact (analytical) results in the plot.
+
+The second project, <a href="./logistic/">logistic/</a>
 
 The Python program ExponentialGrowth shows how to calculate exponential growth using the analytical solution. 
 It also shows how to estimate the growth by discretizing the rate equation.
