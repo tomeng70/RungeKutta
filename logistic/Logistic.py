@@ -22,7 +22,7 @@ def rateEqn(N, t):
     return val
 
 # calculate next value in population using previous value and previous time.
-def calcNext(N, t):
+def calcNextRK(N, t):
     # calculate the runge kutta terms.
     k1 = rateEqn(N, t)
     k2 = rateEqn(N + k1 / 2, t + H/2)
@@ -43,16 +43,16 @@ def main():
     # Nlist holds the analytical values for population size.
     NList = [N0]
 
-    # NEstList holds the estimated values for population size (RK4).
-    NEstList = [N0]
+    # NRKList holds the estimated values for population size (RK4).
+    NRKList = [N0]
 
     while (t <= TIME_LIMIT):
         # use previous estimated pop
         # and previous time to calculate 
         # the next estimated pop
-        NPrev = NEstList[-1]
-        NNext = calcNext(NPrev, t)
-        NEstList.append(NNext)
+        NPrev = NRKList[-1]
+        NNext = calcNextRK(NPrev, t)
+        NRKList.append(NNext)
 
         # add time to list
         t = t + H
@@ -63,7 +63,7 @@ def main():
         NList.append(pop)
 
     # plot results. 
-    plt.plot(tList, NList, ".", tList, NEstList, "+")
+    plt.plot(tList, NList, ".", tList, NRKList, "^")
     plt.title("Logistic Growth: Population vs Time (sec)")
     plt.show()
 
