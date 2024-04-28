@@ -16,7 +16,7 @@ The folder <a href="./exponential/">exponential/</a> contains a Python program, 
   <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/c8319182-0b20-4e42-be49-c26ce5d9f819" width="400" >
 </p>
 
-Click <a href="./exponential/README.md">here</a> for a detailed description of the <a href="./exponential/README.md">Exponential Growth problem</a>.
+Click <a href="./exponential/">here</a> for a detailed description of the <a href="./exponential/">Exponential Growth problem</a>.
 
 # Logistic Growth
 The folder <a href="./logistic/">logistic/</a> contains a Python program, <a href="./logistic/Logistic.py">Logistic.py</a>, which plots two curves that represent the logistic growth of a colony:
@@ -28,4 +28,4 @@ The folder <a href="./logistic/">logistic/</a> contains a Python program, <a hre
   <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/db4110c4-68f4-40fb-9f66-e49f1ba4eeba" width="400" >
 </p>
 
-Click <a href="./logistic/README.md">here</a> for a detailed description of the <a href="./logistic/README.md">Logistic Growth problem</a>.
+Click <a href="./logistic/">here</a> for a detailed description of the <a href="./logistic/">Logistic Growth problem</a>.
