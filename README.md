@@ -25,7 +25,7 @@ The folder <a href="./logistic/">logistic/</a> contains a Python program, <a hre
 
 <p align="center">
   <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/e96dec8e-d006-4004-a1fc-775c300a0d0b" width="400" >
-  <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/8ef079f1-1169-4fc5-b450-3ac0e665deec" width="400" >
-</p
+  <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/d144be96-8750-496b-a00e-b3ead71bf037" width="400" >
+</p>
 
 Click <a href="./logistic/README.md">here</a> for a detailed description of the <a href="./logistic/README.md">Logistic Growth problem</a>.
