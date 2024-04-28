@@ -109,7 +109,7 @@ If you run the program you see that the estimated population values (represented
 </p>
 
 ## Runge-Kutta Method
-For the other project in this repository (logistic growth) a technique known as the Runge-Kutta 4th order (RK4) method is used to model the system behavior as a function of time.  While the RK4 method does a good job modeling logistic growth of a population, it generally does a poor job modeling the behavior of a system that experiences <a href="../exponential/README.md">exponential growth</a>.  The RK4 method is an _explicit_ method.  This means that in order to solve for the current system state, it uses past system state information and interpolates this data to estimate what the current system state should be.
+For the other project in this repository (logistic growth) a technique known as the Runge-Kutta 4th order (RK4) method is used to model the system behavior as a function of time.  While the RK4 method does a good job modeling logistic growth of a population, it generally does a poor job modeling the behavior of a system that experiences exponential growth.  The RK4 method is an _explicit_ method.  This means that in order to solve for the current system state, it uses past system state information and interpolates this data to estimate what the current system state should be.
 
 The RK4 method uses four weighted terms that are generated using previous data to estimate what the future growth of the system will look like. For exponential growth, where the rate of change is very rapid over time, the interpolation scheme of the RK4 method has a hard time accurately modeling this rapidly changing system. An implicit method like the backwards Euler method can often lead to more accurate results for this type of system.
 
