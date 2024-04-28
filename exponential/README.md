@@ -88,15 +88,18 @@ A computer program can use this equation to generate an array of values that rep
 The Python program, ExponentialGrowth.py, has a function called calcNext().  This function calculates the estimated population size at time $t = t_{i+1}$ using the estimated population size at time $t = t_i$:
 
 ```
+# estimate population using backward Euler method.
 def calcNext(Nprev):
+    # calculate the population at the next step in time
+    # using backward Euler method (an implicit solution).
     val = Nprev / (1 - R * H)
     return val
 ```
 ExponentialGrowth.py also has a function called popExp() that calculates the exact population size using the exponential growth equation:
 
 ```
+# calculate the population using exponential growth equation.
 def popExp(t):
-    # calculate the population using exponential growth equation.
     val = N0 * math.exp(R * t)
     return val
 ```
