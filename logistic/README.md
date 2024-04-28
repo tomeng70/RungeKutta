@@ -28,6 +28,14 @@ This rate equation <a href = "../doc/logisticgrowth.pdf">can be integrated</a> t
   $\int{\dfrac{K}{N(K-N)} \, dN } = \int{r \, dt}$
 </p>
 
+The solution is known as the logistic growth equation:
+
+<p align="center">
+  $N(t) = \dfrac{K}{1 + (K/N_0 - 1) \, e^{-rt}}$
+</p>
+
+where $N$ is the population size as a function of time, $t$, $K$ is the carrying capacity of the environment, $N_0$ is the initial population size, and $r$ is the rate of growth of the population.
+
 ## Runge Kutta Fourth Order Method
 The numerical method that we used in the previous section is considered to be an _implicit method_ because in order to solve for the value of our population function at the current time, we have to solve an equation that involves both the previous value of the population function as well as the current value of the population function.  
 
