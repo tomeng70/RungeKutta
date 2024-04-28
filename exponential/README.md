@@ -67,7 +67,7 @@ We can substitute our rate equation in place of $\frac{dN}{dt}$ to represent the
   $N(t_1) = N(t_0) + \Delta t \cdot r \cdot N(t_1)$ 
 </p>
 
-Note that the numerical method that we are using to solve for $N(t_1)$ is an _implicit_ method, since in order to solve for $N(t_1)$ we have to solve an equation that involves both $N(t_1)$ and the previous value $N(t_0)$. Solving this implicit equation for $N(t_1)$ we get the following equation,
+Note that the numerical method that we are using to solve for $N(t_1)$ is an _implicit_ method, since in order to solve for $N(t_1)$ we have to solve an equation that involves both $N(t_1)$ and the previous value $N(t_0)$. If we use algebra to solve this implicit equation for $N(t_1)$ we get the following equation,
 
 <p align="center">
   $N(t_1) = \dfrac{N(t_0)} {1 -  r \cdot \Delta t}$ 
