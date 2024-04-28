@@ -21,7 +21,7 @@ Click <a href="./exponential/">here</a> for a detailed description of the <a hre
 # Logistic Growth
 The folder <a href="./logistic/">logistic/</a> contains a Python program, <a href="./logistic/Logistic.py">Logistic.py</a>, which plots two curves that represent the logistic growth of a colony:
 - The data points that are marked with the "." symbols are the analytically derived values for population.
-- The data points that are marked with the "+" symbols are the estimated values that were calculated using the RK4 iterative method.
+- The data points that are marked with the "^" symbols are the estimated values that were calculated using the RK4 iterative method.
 
 <p align="center">
   <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/757d9566-69ee-4f9c-88da-f8df8267edf9" width="400" >
