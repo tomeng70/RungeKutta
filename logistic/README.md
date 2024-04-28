@@ -1,4 +1,4 @@
-Logistic Growth
+# Logistic Growth
 Imagine you have a population of foxes that live on an island. If you were to track the population size over time, you might observe that as the population size increases, the rate of growth of the population slows down. In an environment like an island, the resources available to the foxes are limited. As a result, the island can only supported a limited number of foxes at any point in time.
 
 <p align="center">
@@ -70,6 +70,11 @@ def calcNext(N, t):
     return nextVal
 ```
 
-If you run the program you see that the RK4 estimated population values (represented by the '^' symbols on the plot) are relatively very close to the exact values (represented by the '.' symbols on the plot):
+If you run the program you see that the RK4 estimated population values (represented by the '^' symbols on the plot) are very close to the exact values (represented by the '.' symbols on the plot):
+
+<p align="center">
+  <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/757d9566-69ee-4f9c-88da-f8df8267edf9" width="400" >
+  <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/db4110c4-68f4-40fb-9f66-e49f1ba4eeba" width="400" >
+</p>
 
 Interestingly enough, while the RK4 method does a good job in this example at modeling the logistic growth of a population, it generally does a poor job modeling the behavior of a system that experiences <a href="../exponential/README.md">exponential growth</a>.  The RK4 uses four weighted terms that are generated using older data to estimate what the future growth of the system will look like. For exponential growth, where the rate of change becomes "explosive" over time, the interpolation scheme of the RK4 method, which relies heavily on past estimated rate data, has a hard time "keeping up" with the rapidly changing system. The RK4 scheme tends to underpredict the rate of change of exponentially growing systems.
