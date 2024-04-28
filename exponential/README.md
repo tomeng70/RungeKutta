@@ -61,7 +61,7 @@ If we use the variable $\Delta t$ for the expression $(t_1 - t_0)$, we get the f
   $N(t_1) = N(t_0) + \Delta t \cdot \dfrac{dN}{dt}$ 
 </p>
 
-We can substitute our rate equation in place of $\frac{dN}{dt}$ to estimate the slope of the population curve at time $t_1$:
+We can substitute our rate equation in place of $\frac{dN}{dt}$ to represent the slope of the population curve at time $t_1$:
 
 <p align="center">
   $N(t_1) = N(t_0) + \Delta t \cdot r \cdot N(t_1)$ 
