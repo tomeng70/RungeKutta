@@ -1,26 +1,21 @@
 # Introduction
-This repository demonstrates how an estimated solution to an ordinary differential equation can be generated using numerical methods.  There are two projects within this repository.  The project <a href="./exponential/">exponential/</a> demonstrates how the backwards Euler method can be used to obtain an estimated solution for the exponential growth rate problem.  The project plots the population vs time for a colony that grows exponentially.  The estimated results are compared to the exact (analytical) results in the plot.
+This repository contains code that demonstrates how an estimated solution to an ordinary differential equation can be generated using numerical methods.  There are two projects within this repository.  The project <a href="./exponential/">exponential/</a> demonstrates how the backwards Euler method can be used to obtain an estimated solution for the exponential growth rate problem.  The project plots the population vs time for a colony that grows exponentially.  The estimated results are compared to the exact (analytical) results in the plot.
 
-The second project, <a href="./logistic/">logistic/</a>
+The second project, <a href="./logistic/">logistic/</a>, demonstrates how the Runge-Kutta 4th order (RK4) method can be used to obtain an estimated solution for the logistic growth rate problem.  While the RK4 does not work well for modeling a system that grows exponentially, it can be used to model a system that experiences logistic growth.  In logistic growth, the carrying capacity of the system limits the growth of the population and the RK4 method is able to more accurately model the population size as a function of time.
 
-The Python program ExponentialGrowth shows how to calculate exponential growth using the analytical solution. 
-It also shows how to estimate the growth by discretizing the rate equation.
-Finally, it also shows how to estimate the growth using an application of the Runge Kutta method (4 terms).
-
-The Python program Logistic shows how to calculate logistic growth using the analytical solution.
-It also shows how to estimate the growth using an application of the Runge Kutta Method (4 terms).
-
-Both programs plot the analytical and estimated values vs time.
 
 # Exponential Growth
-The following plots shows exponential growth calculated three ways:
-- "." are the analytically derived values for population.
-- "+" are the estimated values calculated using the time discretized rate equation.
-- "^" are the estimated values calculated using the Runge Kutta method.
+The folder <a href="./exponential/">exponential/</a> contains a Python program, <a href="./exponential/ExponentialGrowth.py">ExponentialGrowth.py</a>, which plots two curves that represent the exponential growth of a colony:
+- The data points that are marked with the "." symbols are the analytically derived values for population.
+- The data points that are marked with the "+" symbols are the estimated values that were calculated using an _implicit_ iterative method.
 
-<img src="https://github.com/tomeng70/RungeKutta/assets/12796159/03d08a3d-01ab-4fa8-98de-719df0bb2c1f" width="500" >
-<BR>
-<img src="https://github.com/tomeng70/RungeKutta/assets/12796159/3d8d1e91-a5d0-4747-aa79-d62eb25e96bb" width="500" >
+<p align="center">
+  <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/3f153c81-e8bc-485a-ac10-b79ee426a811" width="400" >
+  <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/c8319182-0b20-4e42-be49-c26ce5d9f819" width="400" >
+</p>
+
+
+Click <a href="./exponential/README.md">here</a> for a detailed description of the <a href="./exponential/README.md">Exponential Growth problem</a>.
 
 # Logistic Growth
 The following plots shows exponential growth calculated two ways:
