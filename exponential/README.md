@@ -113,7 +113,7 @@ For the other project in this repository (logistic growth) a technique known as 
 
 The RK4 method uses four weighted terms that are generated using previous data to estimate what the future growth of the system will look like. For exponential growth, where the rate of change is very rapid over time, the interpolation scheme of the RK4 method has a hard time accurately modeling this rapidly changing system. An implicit method like the backwards Euler method can often lead to more accurate results for this type of system.
 
-The Python program, <a href="./ExponentialGrowthWithRK.py">ExponentialGrowthWithRK.py</a> contains additional code that estimates the exponential population growth using the RK4 method.  You can see from the plots of this version of the program that the RK4 scheme (represented by the '^' symbols in the plots) does not accurately model the exponential population growth, especially when compared to the accuracy of the results calculated using the implicit backwards Euler method (represnted by the '+' symbols).
+The Python program, <a href="./ExponentialGrowthWithRK.py">ExponentialGrowthWithRK.py</a> contains additional code that estimates the exponential population growth using the RK4 method.  You can see from the plots of this version of the program that the RK4 scheme (represented by the green '^' symbols in the plots) does not accurately model the exponential population growth, especially when compared to the accuracy of the results calculated using the implicit backwards Euler method (represnted by the orange '+' symbols).
 
 <p align="center">
   <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/96433a46-8698-4fe7-9529-fd6f4750bd6a" width="400" >
