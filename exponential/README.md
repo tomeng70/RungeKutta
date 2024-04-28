@@ -43,14 +43,13 @@ where the variable $C$ represents a constant value.  This equation can be rewrit
 This equation is an exact solution for the population size, $N$, as a function of time, $t$. $N_0$ is the initial population size at time $t = 0$.  If you know the value of your rate of growth, $r$, and the initial population size, $N_0$, then you can calculate the population size at any time, $t$.
 
 ## An Implicit Numerical Solution
-Some rate problems are not as tractable as this example problem and do not have an analytical solution. If a rate equation does not have a clean analytical solution, a numerical method can often be used instead to approximate a solution for the equation. A numerically derived solution, which often requires the power of a digital computer to generate the solution, can be useful when solving various scientific, engineering, or business-related problems.
+Some rate problems are not as tractable as this example problem and do not have an analytical solution. If a rate equation does not have a analytical solution, often a numerical method can be used instead to approximate a solution for the equation. A numerically derived solution, which often requires the power of a digital computer to calculate the solution, can be useful when solving various scientific, engineering, or business-related problems.
 
 The exponential growth rate equation can be used to demonstrate how a numerical or computational solution can be used to calculate an approximate solution for a differential equation.
 
 Imagine we have a bacterial colony that has a growth rate of $r$ and an initial population size of $N_0$ (at time $t = t_0$).  Suppose we wanted to estimate the size of the colony at some later time, where $t = t_1$.  
 
 We can use our rate equation (which tells us what the slope of our solution is at time $t$) and the previous population size to estimate the size at time $t = t_1$:
-
 
 <p align="center">
   $N(t_1) = N(t_0) + (t_1 - t_0) \cdot \dfrac{dN}{dt}$ 
