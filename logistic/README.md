@@ -45,7 +45,7 @@ This method attempts to model the behavior of the system more accurately by usin
   <a href = "https://youtu.be/ydFM5yON-24?feature=shared">The Runge-Kutta Fourth Order Method (YouTube)</a>
 </p>
 
-The Python program, Logistic.py, has code that calculates the estimated population size at time $t = t_{i+1}$ using the average of the four weighted RK terms:
+The Python program, <a href="./Logistic.py">Logistic.py</a>, has code that calculates the estimated population size at time $t = t_{i+1}$ using the average of the four weighted RK terms:
 
 ```
 # the rate equation for our system.
@@ -72,5 +72,4 @@ def calcNext(N, t):
 
 If you run the program you see that the RK4 estimated population values (represented by the '^' symbols on the plot) are relatively very close to the exact values (represented by the '.' symbols on the plot):
 
-Interestingly enough, while the RK4 method does a good job in this example at modeling the logistic growth of a population, it generally does a poor job modeling the behavior of a system that experiences <a href="../exponential/README.md">exponential growth</a>.  The RK4 uses four weighted terms that are generated using older data to estimate what the future growth of the system will look like. For exponential growth, where the rate of change becomes "explosive" over time, the interpolation scheme of the RK4 method, which relies heavily on past estimated rate data, has a hard time "keeping up" with the rapidly changing system and underpredicts the rate of change of an exponentially growing system.
-
+Interestingly enough, while the RK4 method does a good job in this example at modeling the logistic growth of a population, it generally does a poor job modeling the behavior of a system that experiences <a href="../exponential/README.md">exponential growth</a>.  The RK4 uses four weighted terms that are generated using older data to estimate what the future growth of the system will look like. For exponential growth, where the rate of change becomes "explosive" over time, the interpolation scheme of the RK4 method, which relies heavily on past estimated rate data, has a hard time "keeping up" with the rapidly changing system. The RK4 scheme tends to underpredict the rate of change of exponentially growing systems.
