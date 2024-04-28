@@ -37,7 +37,7 @@ The solution is known as the logistic growth equation:
 where $N$ is the population size as a function of time, $t$, $K$ is the carrying capacity of the environment, $N_0$ is the initial population size, and $r$ is the rate of growth of the population.
 
 ## Runge Kutta Fourth Order Method
-The Runge-Kutta Fourth Order (RK4) method is a popular numerical method for solving ordinary different equations such as the exponential growth equation.  It is considered to be _explicit method_, because the method only requires that we use the information about the state of our system from a previous time step to solve for the state of our system at the current time.  
+The Runge-Kutta Fourth Order (RK4) method is a popular numerical method for solving ordinary different equations such as the logistic growth equation.  It is considered to be _explicit method_, because the method only requires that we use the information about the state of our system from a previous time step to solve for the state of our system at the current time.  
 
 This method attempts to model the behavior of the system more accurately by using an average of weighted terms to _interpolate_ what the state of the system will be in the future.  Describing the Runge-Kutta method in detail is beyond the intended scope of this repository.  However, the following YouTube video provides a very brief, but helpful description of how the RK4 method of estimation is implemented:
 
