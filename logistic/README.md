@@ -37,28 +37,28 @@ The solution is known as the logistic growth equation:
 where $N$ is the population size as a function of time, $t$, $K$ is the carrying capacity of the environment, $N_0$ is the initial population size, and $r$ is the rate of growth of the population.
 
 ## Runge Kutta Fourth Order Method
-The numerical method that we used in the previous section is considered to be an _implicit method_ because in order to solve for the value of our population function at the current time, we have to solve an equation that involves both the previous value of the population function as well as the current value of the population function.  
-
 The Runge-Kutta Fourth Order (RK4) method is a popular numerical method for solving ordinary different equations such as the exponential growth equation.  It is considered to be _explicit method_, because the method only requires that we use the information about the state of our system from a previous time step to solve for the state of our system at the current time.  
 
-Describing the Runge-Kutta method in detail is beyond the intended scope of this repository.  However, the following YouTube video provides a very brief, but helpful description of how the RK4 method of estimation is implemented:
+This method attempts to model the behavior of the system more accurately by using an average of weighted terms to _interpolate_ what the state of the system will be in the future.  Describing the Runge-Kutta method in detail is beyond the intended scope of this repository.  However, the following YouTube video provides a very brief, but helpful description of how the RK4 method of estimation is implemented:
 
 <p align="center">
   <a href = "https://youtu.be/ydFM5yON-24?feature=shared">The Runge-Kutta Fourth Order Method (YouTube)</a>
 </p>
 
-The Python program, ExponentialGrowth.py, has code that calculates the estimated population size at time $t = t_{i+1}$ using the average of the four weighted RK terms:
+The Python program, Logistic.py, has code that calculates the estimated population size at time $t = t_{i+1}$ using the average of the four weighted RK terms:
 
 ```
+# the rate equation for our system.
 def rateEqn(N, t):
-    # note for exponential growth growth, the rate does not depend on time.
-    # instead, it's based on the current population only.
-    # we will still pass time as an argument to this function, 
+    # note for logistic growth, the rate does not depend on time.
+    # instead, it's based on the current population and carrying capacity.
+    # will still pass time as an argument to this function, 
     # even though it's not needed.
-    val = R * N
+    val = R * ((K - N)/K) * N
     return val
 
-def calcRKNext(N, t):
+# calculate next value in population using previous value and previous time.
+def calcNext(N, t):
     # calculate the runge kutta terms.
     k1 = rateEqn(N, t)
     k2 = rateEqn(N + k1 / 2, t + H/2)
@@ -69,4 +69,8 @@ def calcRKNext(N, t):
     nextVal = N + H * (k1 + 2 * k2 + 2 * k3 + k4) / 6
     return nextVal
 ```
-If you run the program you see that the estimated population values (represented by the '^' symbols on the plot) are very close to the exact values (represented by the '.' symbols on the plot):
+
+If you run the program you see that the RK4 estimated population values (represented by the '^' symbols on the plot) are relatively very close to the exact values (represented by the '.' symbols on the plot):
+
+Interestingly enough, while the RK4 method does a good job in this example at modeling the logistic growth of a population, it generally does a poor job modeling the behavior of a system that experiences <a href="../exponential/README.md">exponential growth</a>.  The RK4 uses four weighted terms that are generated using older data to estimate what the future growth of the system will look like. For exponential growth, where the rate of change becomes "explosive" over time, the interpolation scheme of the RK4 method, which relies heavily on past estimated rate data, has a hard time "keeping up" with the rapidly changing system and underpredicts the rate of change of an exponentially growing system.
+
