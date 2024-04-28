@@ -24,8 +24,8 @@ The folder <a href="./logistic/">logistic/</a> contains a Python program, <a hre
 - The data points that are marked with the "+" symbols are the estimated values that were calculated using the RK4 iterative method.
 
 <p align="center">
-  <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/e96dec8e-d006-4004-a1fc-775c300a0d0b" width="400" >
-  <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/d144be96-8750-496b-a00e-b3ead71bf037" width="400" >
+  <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/757d9566-69ee-4f9c-88da-f8df8267edf9" width="400" >
+  <img src="https://github.com/tomeng70/RungeKutta/assets/12796159/db4110c4-68f4-40fb-9f66-e49f1ba4eeba" width="400" >
 </p>
 
 Click <a href="./logistic/README.md">here</a> for a detailed description of the <a href="./logistic/README.md">Logistic Growth problem</a>.
